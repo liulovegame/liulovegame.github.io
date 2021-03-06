@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>博客</title>
+  <icon>http://yoursite.com/icon.png</icon>
+  <subtitle>简而不单</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-08-07T09:23:56.773Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>liu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>回流和重绘</title>
+    <link href="http://yoursite.com/2020/08/05/reflow-repaint/"/>
+    <id>http://yoursite.com/2020/08/05/reflow-repaint/</id>
+    <published>2020-08-05T14:37:38.000Z</published>
+    <updated>2020-08-07T09:23:56.773Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;回流-Reflow&quot;&gt;&lt;a href=&quot;#回流-Reflow&quot; class=&quot;headerlink&quot; title=&quot;回流(Reflow)&quot;&gt;&lt;/a&gt;回流(Reflow)&lt;/h2&gt;&lt;p&gt;当Render
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构和算法</title>
+    <link href="http://yoursite.com/2020/08/03/data-structure/"/>
+    <id>http://yoursite.com/2020/08/03/data-structure/</id>
+    <published>2020-08-03T09:27:58.000Z</published>
+    <updated>2020-08-03T09:55:01.901Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;时间复杂度-O-1-O-n-O-n-2-O-logn-O-nlogn&quot;&gt;&lt;a href=&quot;#时间复杂度-O-1-O-n-O-n-2-O-logn-O-nlogn&quot; class=&quot;headerlink&quot; title=&quot;时间复杂度
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript的内存管理</title>
+    <link href="http://yoursite.com/2020/07/08/Memory-Leak/"/>
+    <id>http://yoursite.com/2020/07/08/Memory-Leak/</id>
+    <published>2020-07-08T07:52:45.000Z</published>
+    <updated>2020-07-08T09:00:36.253Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是内存泄漏&quot;&gt;&lt;a href=&quot;#什么是内存泄漏&quot; class=&quot;headerlink&quot; title=&quot;什么是内存泄漏&quot;&gt;&lt;/a&gt;什么是内存泄漏&lt;/h2&gt;&lt;p&gt;内存泄漏（Memory
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Promise</title>
+    <link href="http://yoursite.com/2020/07/05/promise/"/>
+    <id>http://yoursite.com/2020/07/05/promise/</id>
+    <published>2020-07-05T08:00:47.000Z</published>
+    <updated>2020-07-07T08:58:25.506Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="Promise" scheme="http://yoursite.com/tags/Promise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是BFC</title>
+    <link href="http://yoursite.com/2020/06/28/BFC/"/>
+    <id>http://yoursite.com/2020/06/28/BFC/</id>
+    <published>2020-06-28T07:38:46.000Z</published>
+    <updated>2020-06-30T03:07:21.308Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 ——&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSI七层协议模型和TCP/IP模型</title>
+    <link href="http://yoursite.com/2020/06/16/osi-and-tcpip/"/>
+    <id>http://yoursite.com/2020/06/16/osi-and-tcpip/</id>
+    <published>2020-06-16T08:44:36.000Z</published>
+    <updated>2020-06-30T03:10:08.876Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;OSI模型&quot;&gt;&lt;a href=&quot;#OSI模型&quot; class=&quot;headerlink&quot; title=&quot;OSI模型&quot;&gt;&lt;/a&gt;OSI模型&lt;/h2&gt;&lt;p&gt;OSI七层结构：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3 max/min-content及fit-content等width值</title>
+    <link href="http://yoursite.com/2020/06/15/fill-available/"/>
+    <id>http://yoursite.com/2020/06/15/fill-available/</id>
+    <published>2020-06-15T02:59:34.000Z</published>
+    <updated>2020-06-30T03:09:09.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一般地，有两种自适应：撑满空闲空间与收缩到内容尺寸。CSS3将这两种情况分别定义为’fill-availabel’和’fit-content’。除此之外
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>koa常用的中间件</title>
+    <link href="http://yoursite.com/2020/06/14/koa-middleware/"/>
+    <id>http://yoursite.com/2020/06/14/koa-middleware/</id>
+    <published>2020-06-14T08:18:57.000Z</published>
+    <updated>2020-06-30T03:09:41.357Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;koa-router&quot;&gt;&lt;a href=&quot;#koa-router&quot; class=&quot;headerlink&quot; title=&quot;koa-router&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/ZijianHe/koa-router&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些题目</title>
+    <link href="http://yoursite.com/2020/06/11/leetcode/"/>
+    <id>http://yoursite.com/2020/06/11/leetcode/</id>
+    <published>2020-06-11T03:02:16.000Z</published>
+    <updated>2020-10-22T04:15:17.822Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;给定一个整数数组-nums-和一个目标值-target，请你在该数组中找出和为目标值的那-两个-整数，并返回他们的数组下标。&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="题库" scheme="http://yoursite.com/tags/%E9%A2%98%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>oauth2</title>
+    <link href="http://yoursite.com/2020/05/26/oauth2/"/>
+    <id>http://yoursite.com/2020/05/26/oauth2/</id>
+    <published>2020-05-26T07:00:55.000Z</published>
+    <updated>2020-06-30T03:12:32.232Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;参考: &lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;理解OAuth 2.0&lt;/a&gt; 和 &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js-get/set</title>
+    <link href="http://yoursite.com/2020/05/24/js-setter-getter/"/>
+    <id>http://yoursite.com/2020/05/24/js-setter-getter/</id>
+    <published>2020-05-24T07:17:13.000Z</published>
+    <updated>2020-06-30T03:09:36.800Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;getter 和 setter 方法有什么意义？&lt;br&gt;在&lt;code&gt;java&lt;/code&gt;中有以下体现
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react setState</title>
+    <link href="http://yoursite.com/2020/05/23/react-setState/"/>
+    <id>http://yoursite.com/2020/05/23/react-setState/</id>
+    <published>2020-05-23T07:07:57.000Z</published>
+    <updated>2020-06-30T03:13:27.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript的反柯里化</title>
+    <link href="http://yoursite.com/2020/05/22/js-uncurrying/"/>
+    <id>http://yoursite.com/2020/05/22/js-uncurrying/</id>
+    <published>2020-05-22T09:09:23.000Z</published>
+    <updated>2020-06-30T03:09:39.357Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;柯里化，是固定部分参数，返回一个接受剩余参数的函数，也称为部分计算函数，目的是为了缩小适用范围，创建一个针对性更强的函数。核心思想是把多参数传入的函数拆成单参数（或部分）函数，内部再返回调用下一个单参数（或部分）函数，依次处理剩余的参数。&lt;/p&gt;
+&lt;p&gt;而反柯里化，从字面讲
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js parseInt和map函数</title>
+    <link href="http://yoursite.com/2020/05/22/js-parseInt-and-map/"/>
+    <id>http://yoursite.com/2020/05/22/js-parseInt-and-map/</id>
+    <published>2020-05-22T08:26:47.000Z</published>
+    <updated>2020-06-30T03:09:34.357Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天看了一个js的题目[“1”,”2”,”3”].map(parseInt)，看到后脑海中浮现的答案是[1,2,3],但是看到正确答案后蒙了，仔细想想才知道原因。&lt;/p&gt;
+&lt;h3 id=&quot;parseInt&quot;&gt;&lt;a href=&quot;#parseInt&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript的柯里化</title>
+    <link href="http://yoursite.com/2020/05/21/js-currying/"/>
+    <id>http://yoursite.com/2020/05/21/js-currying/</id>
+    <published>2020-05-21T13:09:13.000Z</published>
+    <updated>2020-06-30T03:09:30.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;柯里化（Currying），又称部分求值（Partial
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>闭包</title>
+    <link href="http://yoursite.com/2020/05/18/js-closures/"/>
+    <id>http://yoursite.com/2020/05/18/js-closures/</id>
+    <published>2020-05-18T09:18:25.000Z</published>
+    <updated>2020-06-30T03:15:34.705Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;MDN: 函数和对其周围状态（&lt;strong&gt;lexical environment&lt;/strong&gt;，词法环境）的引用捆绑在一起构成闭包（&lt;strong&gt;closure&lt;/strong&gt;）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react-hook</title>
+    <link href="http://yoursite.com/2020/05/15/react-hook/"/>
+    <id>http://yoursite.com/2020/05/15/react-hook/</id>
+    <published>2020-05-15T08:38:29.000Z</published>
+    <updated>2020-06-30T03:10:17.588Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;useSate-声明-State-变量&quot;&gt;&lt;a href=&quot;#useSate-声明-State-变量&quot; class=&quot;headerlink&quot; title=&quot;useSate 声明 State 变量&quot;&gt;&lt;/a&gt;useSate 声明 State
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react渲染</title>
+    <link href="http://yoursite.com/2020/05/14/react-rendering/"/>
+    <id>http://yoursite.com/2020/05/14/react-rendering/</id>
+    <published>2020-05-14T07:13:15.000Z</published>
+    <updated>2020-06-30T03:10:19.317Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;react-条件渲染&quot;&gt;&lt;a href=&quot;#react-条件渲染&quot; class=&quot;headerlink&quot; title=&quot;react 条件渲染&quot;&gt;&lt;/a&gt;react 条件渲染&lt;/h3&gt;&lt;h4 id=&quot;IF-ELSE&quot;&gt;&lt;a href=&quot;#IF-ELSE&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>console的用法</title>
+    <link href="http://yoursite.com/2020/04/13/console/"/>
+    <id>http://yoursite.com/2020/04/13/console/</id>
+    <published>2020-04-13T13:51:46.000Z</published>
+    <updated>2020-09-22T08:04:16.808Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;分类输出&quot;&gt;&lt;a href=&quot;#分类输出&quot; class=&quot;headerlink&quot; title=&quot;分类输出&quot;&gt;&lt;/a&gt;分类输出&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="console" scheme="http://yoursite.com/tags/console/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React-Redux 使用</title>
+    <link href="http://yoursite.com/2020/04/01/redux-basic-use/"/>
+    <id>http://yoursite.com/2020/04/01/redux-basic-use/</id>
+    <published>2020-04-01T07:23:13.000Z</published>
+    <updated>2020-06-30T03:10:22.853Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Provider和connect&quot;&gt;&lt;a href=&quot;#Provider和connect&quot; class=&quot;headerlink&quot; title=&quot;Provider和connect&quot;&gt;&lt;/a&gt;Provider和connect&lt;/h2&gt;&lt;p&gt;React-Redux
+        
+      
+    
+    </summary>
+    
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+      <category term="redux" scheme="http://yoursite.com/tags/redux/"/>
+    
+  </entry>
+  
+</feed>
