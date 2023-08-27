@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>博客</title>
+  <icon>http://yoursite.com/icon.png</icon>
+  <subtitle>简而不单</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2023-08-27T09:04:16.650Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>liu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>了解 EIP712</title>
+    <link href="http://yoursite.com/2023/08/27/eip-712/"/>
+    <id>http://yoursite.com/2023/08/27/eip-712/</id>
+    <published>2023-08-27T07:53:45.000Z</published>
+    <updated>2023-08-27T09:04:16.650Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;以太坊钱包如 MetaMask 都支持 EIP712 —— 类型结构化消息签名标准，，让钱包可以结构化和可读的格式在签名提示中显示数据。EIP712
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="web3" scheme="http://yoursite.com/tags/web3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Truffle的简单使用</title>
+    <link href="http://yoursite.com/2023/08/16/truffle-use/"/>
+    <id>http://yoursite.com/2023/08/16/truffle-use/</id>
+    <published>2023-08-16T10:32:14.000Z</published>
+    <updated>2023-08-27T09:04:16.651Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;什么是&lt;a href=&quot;https://trufflesuite.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Truffle&lt;/a&gt;&lt;br&gt;最全面的智能合约开发工具套件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="web3" scheme="http://yoursite.com/tags/web3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nextjs + Tailwind css + Strapi CMS 使用</title>
+    <link href="http://yoursite.com/2022/10/30/nextjs-and-cms/"/>
+    <id>http://yoursite.com/2022/10/30/nextjs-and-cms/</id>
+    <published>2022-10-30T07:47:20.000Z</published>
+    <updated>2023-08-27T09:04:16.650Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;记一次&lt;a href=&quot;https://nextjs.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Nextjs&lt;/a&gt; + &lt;a href=&quot;https://tailwindcss.com/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将 JavaScript 日期初始化为特定时区</title>
+    <link href="http://yoursite.com/2022/06/24/date-timezone/"/>
+    <id>http://yoursite.com/2022/06/24/date-timezone/</id>
+    <published>2022-06-24T03:27:12.000Z</published>
+    <updated>2023-08-27T09:04:16.643Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;JavaScript 的日期对象在内部使用 UTC，但根据操作计算机的本地时间显示输出。日期对象没有任何时区概念。没有声明字符串对象。它只是对自 &lt;code&gt;1970-01-01 00:00:00 UTC&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目目录结构推荐</title>
+    <link href="http://yoursite.com/2021/10/30/directory-structure/"/>
+    <id>http://yoursite.com/2021/10/30/directory-structure/</id>
+    <published>2021-10-30T07:47:20.000Z</published>
+    <updated>2021-11-04T14:05:57.686Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>input 失去焦点重复校验</title>
+    <link href="http://yoursite.com/2020/08/09/input-blur/"/>
+    <id>http://yoursite.com/2020/08/09/input-blur/</id>
+    <published>2020-08-09T07:12:53.000Z</published>
+    <updated>2021-10-16T06:57:45.476Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在 input 框中，失去焦点时做了校验，并弹窗提示。&lt;br&gt;在点保存时又做了一遍校验，但是当在输入框输入内容后，不点击空白，直接点击保存按钮则会出现连续校验两遍的问题。&lt;br&gt;因为失去焦点事件是 mousedown 默认触发的，所以，在点击的按钮上阻止
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>油猴脚本教程</title>
+    <link href="http://yoursite.com/2020/08/09/tampermonkey/"/>
+    <id>http://yoursite.com/2020/08/09/tampermonkey/</id>
+    <published>2020-08-09T06:00:23.000Z</published>
+    <updated>2021-09-04T07:25:44.174Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;功能注释&quot;&gt;&lt;a href=&quot;#功能注释&quot; class=&quot;headerlink&quot; title=&quot;功能注释&quot;&gt;&lt;/a&gt;功能注释&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性名&lt;/th&gt;
+&lt;th
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>页面加载时使用脚本自动跳转到新页面浏览器不会产生历史记录</title>
+    <link href="http://yoursite.com/2020/08/09/auto-jump-history/"/>
+    <id>http://yoursite.com/2020/08/09/auto-jump-history/</id>
+    <published>2020-08-09T02:19:53.000Z</published>
+    <updated>2021-09-04T07:25:44.147Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;需求场景：&quot;&gt;&lt;a href=&quot;#需求场景：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于flex布局的最后一行元素宽度问题</title>
+    <link href="http://yoursite.com/2020/08/08/flex-finally-width/"/>
+    <id>http://yoursite.com/2020/08/08/flex-finally-width/</id>
+    <published>2020-08-08T06:35:53.000Z</published>
+    <updated>2021-09-04T07:25:44.163Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题来源&quot;&gt;&lt;a href=&quot;#问题来源&quot; class=&quot;headerlink&quot; title=&quot;问题来源&quot;&gt;&lt;/a&gt;问题来源&lt;/h2&gt;&lt;p&gt;问题是这样的，我有一个 list，期望做成一个固定宽度，一行排放个数不确定的列表，随着窗口的拉伸，item
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unicode编码和解码</title>
+    <link href="http://yoursite.com/2020/08/07/%20unicode/"/>
+    <id>http://yoursite.com/2020/08/07/%20unicode/</id>
+    <published>2020-08-07T03:09:53.000Z</published>
+    <updated>2021-09-04T07:25:44.142Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;全局方法&quot;&gt;&lt;a href=&quot;#全局方法&quot; class=&quot;headerlink&quot; title=&quot;全局方法&quot;&gt;&lt;/a&gt;全局方法&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;方法&lt;/th&gt;
+&lt;th
+        
+      
+    
+    </summary>
+    
+    
+      <category term="categories" scheme="http://yoursite.com/categories/categories/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回流和重绘</title>
+    <link href="http://yoursite.com/2020/08/05/reflow-repaint/"/>
+    <id>http://yoursite.com/2020/08/05/reflow-repaint/</id>
+    <published>2020-08-05T14:37:38.000Z</published>
+    <updated>2020-08-07T09:23:56.773Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;回流-Reflow&quot;&gt;&lt;a href=&quot;#回流-Reflow&quot; class=&quot;headerlink&quot; title=&quot;回流(Reflow)&quot;&gt;&lt;/a&gt;回流(Reflow)&lt;/h2&gt;&lt;p&gt;当Render
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构和算法</title>
+    <link href="http://yoursite.com/2020/08/03/data-structure/"/>
+    <id>http://yoursite.com/2020/08/03/data-structure/</id>
+    <published>2020-08-03T09:27:58.000Z</published>
+    <updated>2020-08-03T09:55:01.901Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;时间复杂度-O-1-O-n-O-n-2-O-logn-O-nlogn&quot;&gt;&lt;a href=&quot;#时间复杂度-O-1-O-n-O-n-2-O-logn-O-nlogn&quot; class=&quot;headerlink&quot; title=&quot;时间复杂度
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript的内存管理</title>
+    <link href="http://yoursite.com/2020/07/08/Memory-Leak/"/>
+    <id>http://yoursite.com/2020/07/08/Memory-Leak/</id>
+    <published>2020-07-08T07:52:45.000Z</published>
+    <updated>2020-07-08T09:00:36.253Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是内存泄漏&quot;&gt;&lt;a href=&quot;#什么是内存泄漏&quot; class=&quot;headerlink&quot; title=&quot;什么是内存泄漏&quot;&gt;&lt;/a&gt;什么是内存泄漏&lt;/h2&gt;&lt;p&gt;内存泄漏（Memory
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Promise</title>
+    <link href="http://yoursite.com/2020/07/05/promise/"/>
+    <id>http://yoursite.com/2020/07/05/promise/</id>
+    <published>2020-07-05T08:00:47.000Z</published>
+    <updated>2020-07-07T08:58:25.506Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="Promise" scheme="http://yoursite.com/tags/Promise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是BFC</title>
+    <link href="http://yoursite.com/2020/06/28/BFC/"/>
+    <id>http://yoursite.com/2020/06/28/BFC/</id>
+    <published>2020-06-28T07:38:46.000Z</published>
+    <updated>2020-06-30T03:07:21.308Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 ——&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSI七层协议模型和TCP/IP模型</title>
+    <link href="http://yoursite.com/2020/06/16/osi-and-tcpip/"/>
+    <id>http://yoursite.com/2020/06/16/osi-and-tcpip/</id>
+    <published>2020-06-16T08:44:36.000Z</published>
+    <updated>2021-10-23T09:07:11.144Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;OSI模型&quot;&gt;&lt;a href=&quot;#OSI模型&quot; class=&quot;headerlink&quot; title=&quot;OSI模型&quot;&gt;&lt;/a&gt;OSI模型&lt;/h2&gt;&lt;p&gt;OSI七层结构：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3 max/min-content及fit-content等width值</title>
+    <link href="http://yoursite.com/2020/06/15/fill-available/"/>
+    <id>http://yoursite.com/2020/06/15/fill-available/</id>
+    <published>2020-06-15T02:59:34.000Z</published>
+    <updated>2020-06-30T03:09:09.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一般地，有两种自适应：撑满空闲空间与收缩到内容尺寸。CSS3将这两种情况分别定义为’fill-availabel’和’fit-content’。除此之外
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>koa常用的中间件</title>
+    <link href="http://yoursite.com/2020/06/14/koa-middleware/"/>
+    <id>http://yoursite.com/2020/06/14/koa-middleware/</id>
+    <published>2020-06-14T08:18:57.000Z</published>
+    <updated>2020-06-30T03:09:41.357Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;koa-router&quot;&gt;&lt;a href=&quot;#koa-router&quot; class=&quot;headerlink&quot; title=&quot;koa-router&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/ZijianHe/koa-router&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些题目</title>
+    <link href="http://yoursite.com/2020/06/11/questions/"/>
+    <id>http://yoursite.com/2020/06/11/questions/</id>
+    <published>2020-06-11T03:02:16.000Z</published>
+    <updated>2021-11-04T14:05:57.746Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;给定一个整数数组-nums-和一个目标值-target，请你在该数组中找出和为目标值的那-两个-整数，并返回他们的数组下标。&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="题库" scheme="http://yoursite.com/tags/%E9%A2%98%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>oauth2</title>
+    <link href="http://yoursite.com/2020/05/26/oauth2/"/>
+    <id>http://yoursite.com/2020/05/26/oauth2/</id>
+    <published>2020-05-26T07:00:55.000Z</published>
+    <updated>2020-06-30T03:12:32.232Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;参考: &lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;理解OAuth 2.0&lt;/a&gt; 和 &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
+  
+</feed>

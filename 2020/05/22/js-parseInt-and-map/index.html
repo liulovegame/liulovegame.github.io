@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="个人博客"><title>js parseInt和map函数 | 博客</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/live2d.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">js parseInt和map函数</h1><a id="logo" href="/.">博客</a><p class="description">简而不单</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/tags/"><i class="fa fa-tag"> 标签</i></a><a href="/history/"><i class="fa fa-history"> 历史</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">js parseInt和map函数</h1><div class="post-meta">May 22, 2020</div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#parseInt"><span class="toc-number">1.</span> <span class="toc-text">parseInt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#map"><span class="toc-number">2.</span> <span class="toc-text">map</span></a></li></ol></div></div><div class="post-content"><p>今天看了一个js的题目[“1”,”2”,”3”].map(parseInt)，看到后脑海中浮现的答案是[1,2,3],但是看到正确答案后蒙了，仔细想想才知道原因。</p>
+<h3 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt"></a>parseInt</h3><p>parseInt有两个参数，后面那个是可选参数： <code>parseInt(string, radix)</code></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>必需。要被解析的字符串。</td>
+</tr>
+<tr>
+<td>radix</td>
+<td>可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</td>
+</tr>
+</tbody>
+</table>
+<p>radix表示string的基数，当radix存在时，string以radix基数解析，当radix为0或者无时，根据string来解析，”0x” 开头，以16进制解析，“0”开头，以十进制或8进制解析，1-9开头，以十进制解析</p>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>map是对数组的每一个元素调用回调函数并返回一个包含结果的数组，有三个参数，其中一个可选参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> new_array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue[, index[, array]]</span>) </span>&#123;</span><br><span class="line"> <span class="comment">// Return element for new_array </span></span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
+<p><code>callback</code> 生成新数组元素的函数，使用三个参数：</p>
+<table>
+<thead>
+<tr>
+<th>currentValue</th>
+<th>callback 数组中正在处理的当前元素。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index可选</td>
+<td>callback 数组中正在处理的当前元素的索引。</td>
+</tr>
+<tr>
+<td>array可选</td>
+<td>map 方法调用的数组。</td>
+</tr>
+</tbody>
+</table>
+<p><code>thisArg</code>  可选, 执行 callback 函数时值被用作this。</p>
+<p>map中回调函数的语法：function callbackfn(value, index, array1)，可使用最多三个参数来声明回调函数。</p>
+<p>第一参数value，数组元素的值；第二个参数index，数组元素的数组所以；array1，包含该元素的数组对象。</p>
+<p>因此，[“1”,”2”,”3”].map(parseInt)等于[parseInt(1,0),parseInt(2,1),parseInt(3,2)]</p>
+</div><div class="tags"><a href="/tags/javascript/">javascript</a></div><div class="post-nav"><a class="pre" href="/2020/05/22/js-uncurrying/">javascript的反柯里化</a><a class="next" href="/2020/05/21/js-currying/">JavaScript的柯里化</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/IM/" style="font-size: 15px;">IM</a> <a href="/tags/WebRTC/" style="font-size: 15px;">WebRTC</a> <a href="/tags/Promise/" style="font-size: 15px;">Promise</a> <a href="/tags/console/" style="font-size: 15px;">console</a> <a href="/tags/数据结构/" style="font-size: 15px;">数据结构</a> <a href="/tags/web3/" style="font-size: 15px;">web3</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/mongodb/" style="font-size: 15px;">mongodb</a> <a href="/tags/资料/" style="font-size: 15px;">资料</a> <a href="/tags/cavnas/" style="font-size: 15px;">cavnas</a> <a href="/tags/react/" style="font-size: 15px;">react</a> <a href="/tags/题库/" style="font-size: 15px;">题库</a> <a href="/tags/redux/" style="font-size: 15px;">redux</a> <a href="/tags/html/" style="font-size: 15px;">html</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/08/27/eip-712/">了解 EIP712</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/08/16/truffle-use/">Truffle的简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/30/nextjs-and-cms/">Nextjs + Tailwind css + Strapi CMS 使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/24/date-timezone/">将 JavaScript 日期初始化为特定时区</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/30/directory-structure/">项目目录结构推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/input-blur/">input 失去焦点重复校验</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/tampermonkey/">油猴脚本教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/auto-jump-history/">页面加载时使用脚本自动跳转到新页面浏览器不会产生历史记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/08/flex-finally-width/">关于flex布局的最后一行元素宽度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/07/ unicode/">Unicode编码和解码</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.baidu.com/" title="百度" target="_blank">百度</a><ul></ul><a href="https://translate.google.cn/#en/zh-CN" title="谷歌翻译" target="_blank">谷歌翻译</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/." rel="nofollow">博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><div id="landlord"><div class="message"></div><canvas class="live2d" id="live2d" width="280" height="250"></canvas></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="//lib.baomitu.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/js/contextMenu.js?v=0.0.0"></script><script type="text/javascript" src="/js/live2d.js?v=0.0.0"></script><script type="text/javascript" src="/js/message.js?v=0.0.0"></script></div></body></html>

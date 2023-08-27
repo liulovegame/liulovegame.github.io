@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="个人博客"><title>鼠标获取 event位置、宽高 | 博客</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/live2d.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">鼠标获取 event位置、宽高</h1><a id="logo" href="/.">博客</a><p class="description">简而不单</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/tags/"><i class="fa fa-tag"> 标签</i></a><a href="/history/"><i class="fa fa-history"> 历史</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">鼠标获取 event位置、宽高</h1><div class="post-meta">Feb 25, 2020<span> | </span><span class="category"><a href="/categories/categories/">categories</a></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取宽高和滚动距离"><span class="toc-number">1.</span> <span class="toc-text">获取宽高和滚动距离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#当鼠标事件发生时"><span class="toc-number">2.</span> <span class="toc-text">当鼠标事件发生时</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#offsetX，offsetY"><span class="toc-number">2.1.</span> <span class="toc-text">offsetX，offsetY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#screenX，screenY"><span class="toc-number">2.2.</span> <span class="toc-text">screenX，screenY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clientX，clientY"><span class="toc-number">2.3.</span> <span class="toc-text">clientX，clientY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pageX，pageY"><span class="toc-number">2.4.</span> <span class="toc-text">pageX，pageY</span></a></li></ol></li></ol></div></div><div class="post-content"><h2 id="获取宽高和滚动距离"><a href="#获取宽高和滚动距离" class="headerlink" title="获取宽高和滚动距离"></a>获取宽高和滚动距离</h2><ul>
+<li><code>offsetWidth</code> 返回元素的宽度（包括元素宽度、内边距和边框，不包括外边距）</li>
+<li><code>offsetHeight</code> 返回元素的高度（包括元素高度、内边距和边框，不包括外边距）</li>
+<li><code>clientWidth</code> 返回元素的宽度（包括元素宽度、内边距，不包括边框和外边距）</li>
+<li><code>clientHeight</code> 返回元素的高度（包括元素高度、内边距，不包括边框和外边距）</li>
+<li><code>style.width</code> 返回元素的宽度（包括元素宽度，不包括内边距、边框和外边距）</li>
+<li><code>style.height</code> 返回元素的高度（包括元素高度，不包括内边距、边框和外边距）</li>
+<li><code>scrollWidth</code> 返回元素的宽度（包括元素宽度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientWidth相同</li>
+<li><code>scrollHeigh</code> 返回元素的高度（包括元素高度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientHeight相同</li>
+<li><code>offsetTop</code> 返回元素的上外缘距离最近采用定位父元素内壁的距离，如果父元素中没有采用定位的，则是获取上外边缘距离文档内壁的距离。</li>
+<li><code>offsetLeft</code> 此属性和offsetTop的原理是一样的，只不过方位不同，这里就不多介绍了。</li>
+<li><code>scrollLeft</code> 此属性可以获取或者设置对象的最左边到对象在当前窗口显示的范围内的左边的距离，也就是元素被滚动条向左拉动的距离。             返回值是一个整数，单位是像素。此属性是可读写的。</li>
+<li><code>scrollTop</code> 此属性可以获取或者设置对象的最顶部到对象在当前窗口显示的范围内的顶边的距离，也就是元素滚动条被向下拉动的距离。             返回值是一个整数，单位是像素。此属性是可读写的。</li>
+</ul>
+<p><img src="/images/location.webp" alt="宽度和可视区域"></p>
+<h2 id="当鼠标事件发生时"><a href="#当鼠标事件发生时" class="headerlink" title="当鼠标事件发生时"></a>当鼠标事件发生时</h2><blockquote>
+<p>pageX，pageY，screenX，screenY，clientX，和clientY返回一个数，其指示物理“CSS像素”的数量的点是从参考点。事件点是用户单击的位置，参考点是左上角的一个点。这些属性返回该参考点的水平和垂直距离。</p>
+</blockquote>
+<h3 id="offsetX，offsetY"><a href="#offsetX，offsetY" class="headerlink" title="offsetX，offsetY"></a>offsetX，offsetY</h3><p>鼠标相对于事件源元素（srcElement）的X,Y坐标，只有IE事件有这2个属性，标准事件没有对应的属性。</p>
+<h3 id="screenX，screenY"><a href="#screenX，screenY" class="headerlink" title="screenX，screenY"></a>screenX，screenY</h3><p>设置或获取获取鼠标指针位置相对于<code>物理屏幕的左上角</code>的坐标，当改变屏幕的<code>分辨率</code>的时候，坐标会随之改变<br>相对于<code>screen</code>设备像素的坐标。</p>
+<h3 id="clientX，clientY"><a href="#clientX，clientY" class="headerlink" title="clientX，clientY"></a>clientX，clientY</h3><p>设置或获取鼠标指针位置相对于<code>浏览器视口（内容区域的左上角）</code>的坐标，与浏览器是否有滚动条无关<br>相对于页面的可见部分的左上角，通过浏览器窗口“看到”。<br>相对于<code>viewport</code> CSS像素的坐标</p>
+<h3 id="pageX，pageY"><a href="#pageX，pageY" class="headerlink" title="pageX，pageY"></a>pageX，pageY</h3><p>相对于浏览器中完<code>全呈现的内容区域</code>的左上角，此参考点位于左上方的网址栏和后退按钮下方。如果在页面中嵌入可嵌入的可滚动页面，并且用户移动滚动条，则可以实际改变位置。<br>坐标相对于整个渲染页面的左上角（包括滚动隐藏的部分）<br>相对于<code>&lt;html&gt;</code>CSS像素中元素的坐标。</p>
+<p>类似于<code>event.clientX</code>、<code>event.clientY</code>，但它们使用的是文档坐标而非窗口坐标。这2个属性不是标准属性，但得到了广泛支持。IE事件中没有这2个属性。</p>
+<p>也就是说，当浏览器没有滚动条的时候，pageX和clientX是一样的</p>
+<p><img src="/images/page-client.webp" alt="pageX和clientX区别"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clientX</td>
+<td style="text-align:left">以浏览器左上顶角为原点，定位 x 轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">clientY</td>
+<td style="text-align:left">以浏览器左上顶角为原点，定位ｙ轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">offsetX</td>
+<td style="text-align:left">以当前事件的目标对象左上角为原点，定位x轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">offsetY</td>
+<td style="text-align:left">以当前事件的目标对象左上角为原点，定位y轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">pageX</td>
+<td style="text-align:left">以Document 对象（即文本窗口）左上角为原点，定位x轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">pageY</td>
+<td style="text-align:left">以Document 对象（即文本窗口）左上角为原点，定位ｙ轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">screenX</td>
+<td style="text-align:left">计算机屏幕左上角为原点，定位x轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">screenY</td>
+<td style="text-align:left">计算机屏幕左上角为原点，定位ｙ轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">layerX</td>
+<td style="text-align:left">最近的绝对定位的父元素（如果没有，则为Document对象）左上角为原点，定位x轴坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">layerY</td>
+<td style="text-align:left">最近的绝对定位的父元素（如果没有，则为Document对象）左上角为原点，定位ｙ轴坐标</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/location2.png" alt="page、client、screen区别"></p>
+</div><div class="tags"><a href="/tags/javascript/">javascript</a></div><div class="post-nav"><a class="pre" href="/2020/02/27/optimizing-canvas/">canvas性能优化</a><a class="next" href="/2020/02/24/zoom-scale/">zoom和transform scale的区别</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/IM/" style="font-size: 15px;">IM</a> <a href="/tags/WebRTC/" style="font-size: 15px;">WebRTC</a> <a href="/tags/Promise/" style="font-size: 15px;">Promise</a> <a href="/tags/console/" style="font-size: 15px;">console</a> <a href="/tags/数据结构/" style="font-size: 15px;">数据结构</a> <a href="/tags/web3/" style="font-size: 15px;">web3</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/mongodb/" style="font-size: 15px;">mongodb</a> <a href="/tags/资料/" style="font-size: 15px;">资料</a> <a href="/tags/cavnas/" style="font-size: 15px;">cavnas</a> <a href="/tags/react/" style="font-size: 15px;">react</a> <a href="/tags/题库/" style="font-size: 15px;">题库</a> <a href="/tags/redux/" style="font-size: 15px;">redux</a> <a href="/tags/html/" style="font-size: 15px;">html</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/08/27/eip-712/">了解 EIP712</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/08/16/truffle-use/">Truffle的简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/30/nextjs-and-cms/">Nextjs + Tailwind css + Strapi CMS 使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/24/date-timezone/">将 JavaScript 日期初始化为特定时区</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/30/directory-structure/">项目目录结构推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/input-blur/">input 失去焦点重复校验</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/tampermonkey/">油猴脚本教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/auto-jump-history/">页面加载时使用脚本自动跳转到新页面浏览器不会产生历史记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/08/flex-finally-width/">关于flex布局的最后一行元素宽度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/07/ unicode/">Unicode编码和解码</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.baidu.com/" title="百度" target="_blank">百度</a><ul></ul><a href="https://translate.google.cn/#en/zh-CN" title="谷歌翻译" target="_blank">谷歌翻译</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/." rel="nofollow">博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><div id="landlord"><div class="message"></div><canvas class="live2d" id="live2d" width="280" height="250"></canvas></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="//lib.baomitu.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/js/contextMenu.js?v=0.0.0"></script><script type="text/javascript" src="/js/live2d.js?v=0.0.0"></script><script type="text/javascript" src="/js/message.js?v=0.0.0"></script></div></body></html>

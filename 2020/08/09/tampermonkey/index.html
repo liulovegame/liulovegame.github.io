@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="个人博客"><title>油猴脚本教程 | 博客</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/live2d.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">油猴脚本教程</h1><a id="logo" href="/.">博客</a><p class="description">简而不单</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/tags/"><i class="fa fa-tag"> 标签</i></a><a href="/history/"><i class="fa fa-history"> 历史</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">油猴脚本教程</h1><div class="post-meta">Aug 9, 2020<span> | </span><span class="category"><a href="/categories/categories/">categories</a></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#功能注释"><span class="toc-number">1.</span> <span class="toc-text">功能注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本权限"><span class="toc-number">2.</span> <span class="toc-text">脚本权限</span></a></li></ol></div></div><div class="post-content"><h2 id="功能注释"><a href="#功能注释" class="headerlink" title="功能注释"></a>功能注释</h2><table>
+<thead>
+<tr>
+<th>属性名</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td style="text-align:center">油猴脚本的名字</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td style="text-align:center">命名空间，类似于Java的包名，用来区分相同名称的脚本，一般写成作者名字或者网址就可以了</td>
+</tr>
+<tr>
+<td>version</td>
+<td style="text-align:center">脚本版本，油猴脚本的更新会读取这个版本号</td>
+</tr>
+<tr>
+<td>description</td>
+<td style="text-align:center">描述，用来告诉用户这个脚本是干什么用的</td>
+</tr>
+<tr>
+<td>author</td>
+<td style="text-align:center">作者名字</td>
+</tr>
+<tr>
+<td>match</td>
+<td style="text-align:center">只有匹配的网址才会执行对应的脚本，例如<code>*</code>、<code>http://*</code>、<code>http://www.baidu.com/*</code>等，参见<a href="https://developer.chrome.com/docs/extensions/mv3/match_patterns/" target="_blank" rel="noopener">谷歌开发者文档</a></td>
+</tr>
+<tr>
+<td>grant</td>
+<td style="text-align:center">指定脚本运行所需权限，如果脚本拥有相应的权限，就可以调用油猴扩展提供的API与浏览器进行交互。如果设置为<code>none</code>的话，则不使用沙箱环境，脚本会直接运行在网页的环境中，这时候无法使用大部分油猴扩展的API。如果不指定的话，油猴会默认添加几个最常用的API</td>
+</tr>
+<tr>
+<td>require</td>
+<td style="text-align:center">如果脚本依赖其他js库的话，可以使用require指令，在运行脚本之前先加载其他库，常见用法是加载<code>jquery</code></td>
+</tr>
+<tr>
+<td>connect</td>
+<td style="text-align:center">当用户使用<a href="https://www.tampermonkey.net/documentation.php?version=4.9&amp;ext=dhdg&amp;show=dhdg#GM_xmlhttpRequest" target="_blank" rel="noopener">GM_xmlhttpRequest</a>请求远程数据的时候，需要使用connect指定允许访问的域名，支持域名、子域名、IP地址以及<code>*</code>通配符</td>
+</tr>
+<tr>
+<td>updateURL</td>
+<td style="text-align:center">脚本更新网址，当油猴扩展检查更新的时候，会尝试从这个网址下载脚本，然后比对版本号确认是否更新</td>
+</tr>
+</tbody>
+</table>
+<h2 id="脚本权限"><a href="#脚本权限" class="headerlink" title="脚本权限"></a>脚本权限</h2><p>下面简单介绍一下grant指令那里可以填写的一些权限，详情请查看<a href="https://www.tampermonkey.net/documentation.php" target="_blank" rel="noopener">油猴脚本文档</a>。这里就简单介绍几个常用的，可以调用的函数全部以GM_作为开头。</p>
+<table>
+<thead>
+<tr>
+<th>权限名</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unsafeWindow</td>
+<td style="text-align:center">允许脚本可以完整访问原始页面，包括原始页面的脚本和变量。</td>
+</tr>
+<tr>
+<td>GM_getValue(name,defaultValue)</td>
+<td style="text-align:center">从油猴扩展的存储中访问数据。可以设置默认值，在没成功获取到数据的时候当做初始值。如果保存的是日期等类型的话，取出来的数据会变成文本，需要自己转换一下。</td>
+</tr>
+<tr>
+<td>GM_setValue(name,value)</td>
+<td style="text-align:center">将数据保存到存储中</td>
+</tr>
+<tr>
+<td>GM_xmlhttpRequest(details)</td>
+<td style="text-align:center">异步访问网页数据的API，这个方法比较复杂，有大量参数和回调，详情请参考官方文档。</td>
+</tr>
+<tr>
+<td>GM_setClipboard(data, info)</td>
+<td style="text-align:center">将数据复制到剪贴板中，第一个参数是要复制的数据，第二个参数是MIME类型，用于指定复制的数据类型。</td>
+</tr>
+<tr>
+<td>GM_log(message)</td>
+<td style="text-align:center">将日志打印到控制台中，可以使用F12开发者工具查看。</td>
+</tr>
+<tr>
+<td>GM_addStyle(css)</td>
+<td style="text-align:center">像网页中添加自己的样式表。</td>
+</tr>
+<tr>
+<td>GM_notification(details, ondone), GM_notification(text, title, image, onclick)</td>
+<td style="text-align:center">设置网页通知，请参考文档获取用法。</td>
+</tr>
+<tr>
+<td>GM_openInTab(url, loadInBackground)</td>
+<td style="text-align:center">在浏览器中打开网页，可以设置是否在后台打开等几个选项</td>
+</tr>
+</tbody>
+</table>
+</div><div class="tags"><a href="/tags/javascript/">javascript</a></div><div class="post-nav"><a class="pre" href="/2020/08/09/input-blur/">input 失去焦点重复校验</a><a class="next" href="/2020/08/09/auto-jump-history/">页面加载时使用脚本自动跳转到新页面浏览器不会产生历史记录</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/IM/" style="font-size: 15px;">IM</a> <a href="/tags/WebRTC/" style="font-size: 15px;">WebRTC</a> <a href="/tags/Promise/" style="font-size: 15px;">Promise</a> <a href="/tags/console/" style="font-size: 15px;">console</a> <a href="/tags/数据结构/" style="font-size: 15px;">数据结构</a> <a href="/tags/web3/" style="font-size: 15px;">web3</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/mongodb/" style="font-size: 15px;">mongodb</a> <a href="/tags/资料/" style="font-size: 15px;">资料</a> <a href="/tags/cavnas/" style="font-size: 15px;">cavnas</a> <a href="/tags/react/" style="font-size: 15px;">react</a> <a href="/tags/题库/" style="font-size: 15px;">题库</a> <a href="/tags/redux/" style="font-size: 15px;">redux</a> <a href="/tags/html/" style="font-size: 15px;">html</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/08/27/eip-712/">了解 EIP712</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/08/16/truffle-use/">Truffle的简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/30/nextjs-and-cms/">Nextjs + Tailwind css + Strapi CMS 使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/24/date-timezone/">将 JavaScript 日期初始化为特定时区</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/30/directory-structure/">项目目录结构推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/input-blur/">input 失去焦点重复校验</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/tampermonkey/">油猴脚本教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/auto-jump-history/">页面加载时使用脚本自动跳转到新页面浏览器不会产生历史记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/08/flex-finally-width/">关于flex布局的最后一行元素宽度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/07/ unicode/">Unicode编码和解码</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.baidu.com/" title="百度" target="_blank">百度</a><ul></ul><a href="https://translate.google.cn/#en/zh-CN" title="谷歌翻译" target="_blank">谷歌翻译</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/." rel="nofollow">博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><div id="landlord"><div class="message"></div><canvas class="live2d" id="live2d" width="280" height="250"></canvas></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="//lib.baomitu.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/js/contextMenu.js?v=0.0.0"></script><script type="text/javascript" src="/js/live2d.js?v=0.0.0"></script><script type="text/javascript" src="/js/message.js?v=0.0.0"></script></div></body></html>

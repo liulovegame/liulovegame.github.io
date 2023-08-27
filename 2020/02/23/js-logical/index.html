@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="个人博客"><title>js 逻辑位运算符 | 博客</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/live2d.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">js 逻辑位运算符</h1><a id="logo" href="/.">博客</a><p class="description">简而不单</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/tags/"><i class="fa fa-tag"> 标签</i></a><a href="/history/"><i class="fa fa-history"> 历史</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">js 逻辑位运算符</h1><div class="post-meta">Feb 23, 2020<span> | </span><span class="category"><a href="/categories/categories/">categories</a></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#“-amp-”运算符"><span class="toc-number">1.</span> <span class="toc-text">“&amp;”运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“-”运算符"><span class="toc-number">2.</span> <span class="toc-text">“|”运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“-”运算符-1"><span class="toc-number">3.</span> <span class="toc-text">“^”运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“-”运算符-2"><span class="toc-number">4.</span> <span class="toc-text">“~”运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用"><span class="toc-number">5.</span> <span class="toc-text">应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#双-的用法"><span class="toc-number">5.1.</span> <span class="toc-text">双~的用法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“-”-的用法，通常用来取整"><span class="toc-number">6.</span> <span class="toc-text">“|” 的用法，通常用来取整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用左移运算符-lt-lt-迅速得出2的次方"><span class="toc-number">7.</span> <span class="toc-text">使用左移运算符 &lt;&lt; 迅速得出2的次方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-切换变量-0-或-1"><span class="toc-number">8.</span> <span class="toc-text">使用 ^ 切换变量 0 或 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-来完成值交换"><span class="toc-number">9.</span> <span class="toc-text">使用^来完成值交换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-amp-判断奇偶性"><span class="toc-number">10.</span> <span class="toc-text">使用 &amp; 判断奇偶性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-判断符号是否相同"><span class="toc-number">11.</span> <span class="toc-text">使用^判断符号是否相同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-A-0-5-0-来替代-Math-round"><span class="toc-number">12.</span> <span class="toc-text">使用 A + 0.5 | 0 来替代 Math.round()</span></a></li></ol></div></div><div class="post-content"><p>位运算就是对二进制数执行计算，是整数的逐位运算。例如，1+1=2，在十进制计算中是正确的，但是在二进制计算中，1+1=10；对于二进制数 100 取反，等于 001，而不是 -100。</p>
+<p>位运算符有 7 个，分为两类：</p>
+<ul>
+<li>逻辑位运算符：位与（&amp;）、位或（|）、位异或（^）、非位（~）</li>
+<li>移位运算符：左移（&lt;&lt;）、右移（&gt;&gt;）、无符号右移（&gt;&gt;&gt;）</li>
+</ul>
+<p>逻辑位运算符与逻辑运算符的运算方式是相同的，但是针对的对象不同。逻辑位运算符针对的是二进制的整数值，而逻辑运算符针对的是非二进制的值。</p>
+<h3 id="“-amp-”运算符"><a href="#“-amp-”运算符" class="headerlink" title="“&amp;”运算符"></a>“&amp;”运算符</h3><p>“&amp;”运算符（位与）用于对两个二进制操作数逐位进行比较，并根据下表所示的换算表返回结果。</p>
+<table>
+<thead>
+<tr>
+<th>第一个数的位值</th>
+<th style="text-align:center">第二个数的位值</th>
+<th style="text-align:right">运算结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>在位运算中，数值 1 表示 true，0 表示 false，反之亦然。<br>12 和 5 进行位与运算，则返回值为 4。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">12</span> &amp; <span class="number">5</span>);  <span class="comment">//返回值4</span></span><br></pre></td></tr></table></figure>
+<h3 id="“-”运算符"><a href="#“-”运算符" class="headerlink" title="“|”运算符"></a>“|”运算符</h3><p>“|”运算符（位或）用于对两个二进制操作数逐位进行比较，并根据如表格所示的换算表返回结果。</p>
+<table>
+<thead>
+<tr>
+<th>第一个数的位值</th>
+<th style="text-align:center">第二个数的位值</th>
+<th style="text-align:right">运算结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>12 和 5 进行位或运算，则返回值为 13。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">12</span> | <span class="number">5</span>);  <span class="comment">//返回值13</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="“-”运算符-1"><a href="#“-”运算符-1" class="headerlink" title="“^”运算符"></a>“^”运算符</h3><p>“^”运算符（位异或）用于对两个二进制操作数逐位进行比较，并根据如表格所示的换算表返回结果。</p>
+<table>
+<thead>
+<tr>
+<th>第一个数的位值</th>
+<th style="text-align:center">第二个数的位值</th>
+<th style="text-align:right">运算结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>12 和 5 进行位异或运算，则返回值为 9。<br>纯文本复制<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">12</span> ^ <span class="number">5</span>);  <span class="comment">//返回值9</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="“-”运算符-2"><a href="#“-”运算符-2" class="headerlink" title="“~”运算符"></a>“~”运算符</h3><p>“~”运算符（位非）用于对一个二进制操作数逐位进行取反操作。</p>
+<ul>
+<li>第 1 步：把运算数转换为 32 位的二进制整数。</li>
+<li>第 2 步：逐位进行取反操作。</li>
+<li>第 3 步：把二进制反码转换为十进制浮点数</li>
+</ul>
+<p>对 12 进行位非运算，则返回值为 -13。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( ~ <span class="number">12</span> );  <span class="comment">//返回值-13</span></span><br></pre></td></tr></table></figure></p>
+<p>位非运算实际上就是对数字进行取负运算，再减 1。例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( ~ <span class="number">12</span> == <span class="number">12</span><span class="number">-1</span>);  <span class="comment">//返回true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><h4 id="双-的用法"><a href="#双-的用法" class="headerlink" title="双~的用法"></a>双~的用法</h4><p>~~它代表双非按位取反运算符，如果你想使用比Math.floor()更快的方法，那就是它了。需要注意，对于正数，它向下取整；对于负数，向上取整；非数字取值为0，它具体的表现形式为：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">~~<span class="literal">null</span>;      <span class="comment">// =&gt; 0</span></span><br><span class="line">~~<span class="literal">undefined</span>; <span class="comment">// =&gt; 0</span></span><br><span class="line">~~<span class="literal">Infinity</span>;  <span class="comment">// =&gt; 0</span></span><br><span class="line">--<span class="literal">NaN</span>;       <span class="comment">// =&gt; 0</span></span><br><span class="line">~~<span class="number">0</span>;         <span class="comment">// =&gt; 0</span></span><br><span class="line">~~&#123;&#125;;        <span class="comment">// =&gt; 0</span></span><br><span class="line">~~[];        <span class="comment">// =&gt; 0</span></span><br><span class="line">~~(<span class="number">1</span>/<span class="number">0</span>);     <span class="comment">// =&gt; 0</span></span><br><span class="line">~~<span class="literal">false</span>;     <span class="comment">// =&gt; 0</span></span><br><span class="line">~~<span class="literal">true</span>;      <span class="comment">// =&gt; 1</span></span><br><span class="line">~~<span class="number">1.9</span>;       <span class="comment">// =&gt; 1</span></span><br><span class="line">~~<span class="number">-1.9</span>;      <span class="comment">// =&gt; -1</span></span><br></pre></td></tr></table></figure>
+<h3 id="“-”-的用法，通常用来取整"><a href="#“-”-的用法，通常用来取整" class="headerlink" title="“|” 的用法，通常用来取整"></a>“|” 的用法，通常用来取整</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.2</span>|<span class="number">0</span>  <span class="comment">// 1</span></span><br><span class="line"><span class="number">1.8</span>|<span class="number">0</span> <span class="comment">// 1</span></span><br><span class="line"><span class="number">-1.2</span>|<span class="number">0</span> <span class="comment">// -1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(~~<span class="number">11.71</span>)     <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11.71</span> &gt;&gt; <span class="number">0</span>)  <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11.71</span> &lt;&lt; <span class="number">0</span>)  <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11.71</span> | <span class="number">0</span>)   <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11.71</span> &gt;&gt;&gt; <span class="number">0</span>) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用左移运算符-lt-lt-迅速得出2的次方"><a href="#使用左移运算符-lt-lt-迅速得出2的次方" class="headerlink" title="使用左移运算符 &lt;&lt; 迅速得出2的次方"></a>使用左移运算符 &lt;&lt; 迅速得出2的次方</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt;&lt; <span class="number">2</span>  <span class="comment">// 4, 即 2的2次方</span></span><br><span class="line"><span class="number">1</span> &lt;&lt; <span class="number">10</span> <span class="comment">// 1024, 即 2的10次方</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 但是要注意使用场景</span></span><br><span class="line">a = <span class="number">2e9</span>;   <span class="comment">// 2000000000</span></span><br><span class="line">a &lt;&lt; <span class="number">1</span>;    <span class="comment">// -294967296</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用-切换变量-0-或-1"><a href="#使用-切换变量-0-或-1" class="headerlink" title="使用 ^ 切换变量 0 或 1"></a>使用 ^ 切换变量 0 或 1</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// --- before ---</span></span><br><span class="line"><span class="comment">// if 判断</span></span><br><span class="line"><span class="keyword">if</span> (toggle) &#123;</span><br><span class="line">    toggle = <span class="number">0</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    toggle = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 三目运算符</span></span><br><span class="line">togle = toggle ? <span class="number">0</span> : <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// --- after ---</span></span><br><span class="line">toggle ^= <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="使用-来完成值交换"><a href="#使用-来完成值交换" class="headerlink" title="使用^来完成值交换"></a>使用^来完成值交换</h3><p>在 ES6 的解构赋值出来之前，用这种方式会更快(但必须是整数)：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// --- before ---</span></span><br><span class="line"><span class="keyword">let</span> temp = a; a = b; b = temp; <span class="comment">// 传统，但需要借助临时变量</span></span><br><span class="line">b = [a, a = b][<span class="number">0</span>] <span class="comment">// 借助数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// --- after ---</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">7</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">1</span></span><br><span class="line">a ^= b</span><br><span class="line">b ^= a</span><br><span class="line">a ^= b</span><br><span class="line"><span class="built_in">console</span>.log(a)   <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b)   <span class="comment">// 7</span></span><br><span class="line"></span><br><span class="line">[a, b] = [b, a]; <span class="comment">// ES6，解构赋值</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="使用-amp-判断奇偶性"><a href="#使用-amp-判断奇偶性" class="headerlink" title="使用 &amp; 判断奇偶性"></a>使用 &amp; 判断奇偶性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">7</span> &amp; <span class="number">1</span>);    <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span> &amp; <span class="number">1</span>) ;   <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用-判断符号是否相同"><a href="#使用-判断符号是否相同" class="headerlink" title="使用^判断符号是否相同"></a>使用^判断符号是否相同</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(a ^ b) &gt;= <span class="number">0</span>; <span class="comment">//  true 相同; false 不相同</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">-2</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">3</span>;</span><br><span class="line">(a ^ b) &gt;= <span class="number">0</span>; <span class="comment">//-12 falsee</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">2</span>;</span><br><span class="line">(a ^ b) &gt;= <span class="number">0</span>; <span class="comment">//9 true</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用-A-0-5-0-来替代-Math-round"><a href="#使用-A-0-5-0-来替代-Math-round" class="headerlink" title="使用 A + 0.5 | 0 来替代 Math.round()"></a>使用 <code>A + 0.5 | 0</code> 来替代 Math.round()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">24.7</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(a)); <span class="comment">//25;</span></span><br><span class="line"><span class="built_in">console</span>.log( a + <span class="number">0.5</span> | <span class="number">0</span> ); <span class="comment">//25;</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">24.1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(a)); <span class="comment">//24;</span></span><br><span class="line"><span class="built_in">console</span>.log( a + <span class="number">0.5</span> | <span class="number">0</span> ); <span class="comment">//24;</span></span><br></pre></td></tr></table></figure></div><div class="tags"><a href="/tags/javascript/">javascript</a></div><div class="post-nav"><a class="pre" href="/2020/02/24/zoom-scale/">zoom和transform scale的区别</a><a class="next" href="/2020/02/22/jquery-fn/">jquery 扩展方法，自定义函数等一些写法</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/IM/" style="font-size: 15px;">IM</a> <a href="/tags/WebRTC/" style="font-size: 15px;">WebRTC</a> <a href="/tags/Promise/" style="font-size: 15px;">Promise</a> <a href="/tags/console/" style="font-size: 15px;">console</a> <a href="/tags/数据结构/" style="font-size: 15px;">数据结构</a> <a href="/tags/web3/" style="font-size: 15px;">web3</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/mongodb/" style="font-size: 15px;">mongodb</a> <a href="/tags/资料/" style="font-size: 15px;">资料</a> <a href="/tags/cavnas/" style="font-size: 15px;">cavnas</a> <a href="/tags/react/" style="font-size: 15px;">react</a> <a href="/tags/题库/" style="font-size: 15px;">题库</a> <a href="/tags/redux/" style="font-size: 15px;">redux</a> <a href="/tags/html/" style="font-size: 15px;">html</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/08/27/eip-712/">了解 EIP712</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/08/16/truffle-use/">Truffle的简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/10/30/nextjs-and-cms/">Nextjs + Tailwind css + Strapi CMS 使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/24/date-timezone/">将 JavaScript 日期初始化为特定时区</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/30/directory-structure/">项目目录结构推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/input-blur/">input 失去焦点重复校验</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/tampermonkey/">油猴脚本教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/09/auto-jump-history/">页面加载时使用脚本自动跳转到新页面浏览器不会产生历史记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/08/flex-finally-width/">关于flex布局的最后一行元素宽度问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/07/ unicode/">Unicode编码和解码</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.baidu.com/" title="百度" target="_blank">百度</a><ul></ul><a href="https://translate.google.cn/#en/zh-CN" title="谷歌翻译" target="_blank">谷歌翻译</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/." rel="nofollow">博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><div id="landlord"><div class="message"></div><canvas class="live2d" id="live2d" width="280" height="250"></canvas></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="//lib.baomitu.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/js/contextMenu.js?v=0.0.0"></script><script type="text/javascript" src="/js/live2d.js?v=0.0.0"></script><script type="text/javascript" src="/js/message.js?v=0.0.0"></script></div></body></html>
